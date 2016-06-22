@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfRequireNpcInQuest>
+  <RequireNpcInQuest>
+    <QuestName>1a</QuestName>
+    <NpcID>1</NpcID>
+    <Conversation>Tôi là già làng đây....</Conversation>
+  </RequireNpcInQuest>
+</ArrayOfRequireNpcInQuest>

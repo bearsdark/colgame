@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfFontData>
+  <FontData>
+    <AssetName>Font16</AssetName>
+    <Path>Fonts/Font16</Path>
+  </FontData>
+  <FontData>
+    <AssetName>Font14</AssetName>
+    <Path>Fonts/Font14</Path>
+  </FontData>
+  <FontData>
+    <AssetName>Font12</AssetName>
+    <Path>Fonts/Font12</Path>
+  </FontData>
+  <FontData>
+    <AssetName>Font11</AssetName>
+    <Path>Fonts/Font11</Path>
+  </FontData>
+  <FontData>
+    <AssetName>Font10</AssetName>
+    <Path>Fonts/Font10</Path>
+  </FontData>
+  <FontData>
+    <AssetName>Font9</AssetName>
+    <Path>Fonts/Font9</Path>
+  </FontData>
+</ArrayOfFontData>

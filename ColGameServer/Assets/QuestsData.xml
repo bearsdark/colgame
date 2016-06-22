@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfQuestData>
+  <QuestData>
+    <Name>1a</Name>
+    <Title>Gặp già làng</Title>
+    <Content>Bạn hãy tìm gặp NPC già làng.</Content>
+    <Description>Bạn hãy đi đến chỗ già làng để nói chuyện với ông ấy về giấc mơ của bạn.</Description>
+    <Type>npc</Type>
+  </QuestData>
+
+  <QuestData>
+    <Name>1b</Name>
+    <Title>Đánh Quái</Title>
+    <Content>Bạn hãy đánh 10 con quái.</Content>
+    <Description>Bla bla bla bla.....</Description>
+    <Type>monster</Type>
+  </QuestData>
+</ArrayOfQuestData>

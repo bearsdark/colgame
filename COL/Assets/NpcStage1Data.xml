@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfNpcData>
+  <NpcData>
+    <ID>1</ID>
+    <Name>Trưởng Lão</Name>
+    <Texture>npc</Texture>
+    <X>254</X>
+    <Y>440</Y>
+  </NpcData>
+
+  <NpcData>
+    <ID>2</ID>
+    <Name>Trưởng Lão</Name>
+    <Texture>npc</Texture>
+    <X>480</X>
+    <Y>440</Y>
+  </NpcData>
+</ArrayOfNpcData>

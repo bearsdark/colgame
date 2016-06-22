@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ColGameModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Character">
+    <Key>
+      <PropertyRef Name="CharID" />
+    </Key>
+    <Property Name="CharID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CharName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClassID" Type="Byte" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CharClass" Relationship="Self.FK_Characters_CharClass" FromRole="Characters" ToRole="CharClass" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Characters_Users" FromRole="Characters" ToRole="Users" />
+    <NavigationProperty Name="Items_Chars" Relationship="Self.FK_Items_Chars_Characters" FromRole="Characters" ToRole="Items_Chars" />
+  </EntityType>
+  <EntityType Name="CharClass">
+    <Key>
+      <PropertyRef Name="ClassID" />
+    </Key>
+    <Property Name="ClassID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Characters" Relationship="Self.FK_Characters_CharClass" FromRole="CharClass" ToRole="Characters" />
+  </EntityType>
+  <EntityType Name="Conversation">
+    <Key>
+      <PropertyRef Name="CVSID" />
+    </Key>
+    <Property Name="CVSID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CVSNpcID" Type="Int32" Nullable="false" />
+    <Property Name="CVSClassID" Type="Byte" Nullable="false" />
+    <Property Name="CVSType" Type="Byte" Nullable="false" />
+    <Property Name="CVSContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ItemClassID" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="Items_Chars" Relationship="Self.FK_Items_Chars_Items" FromRole="Items" ToRole="Items_Chars" />
+  </EntityType>
+  <EntityType Name="Items_Chars">
+    <Key>
+      <PropertyRef Name="Item_Char_ID" />
+    </Key>
+    <Property Name="Item_Char_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Item_Char_CharID" Type="Int32" Nullable="false" />
+    <Property Name="Item_Char_ItemID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Character" Relationship="Self.FK_Items_Chars_Characters" FromRole="Items_Chars" ToRole="Characters" />
+    <NavigationProperty Name="Item" Relationship="Self.FK_Items_Chars_Items" FromRole="Items_Chars" ToRole="Items" />
+  </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LogType" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="LogContent" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LogOf" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Monster">
+    <Key>
+      <PropertyRef Name="MonsterID" />
+    </Key>
+    <Property Name="MonsterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MonsterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MonsterMap" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Monster_X" Type="Int32" Nullable="false" />
+    <Property Name="Monster_Y" Type="Int32" Nullable="false" />
+    <Property Name="Monster_ReviveTimes" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Npc">
+    <Key>
+      <PropertyRef Name="NpcID" />
+    </Key>
+    <Property Name="NpcID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NpcName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NpcMap" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Npc_X" Type="Int32" Nullable="false" />
+    <Property Name="Npc_Y" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="24" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PassWord" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Phone" Type="Decimal" Precision="15" Scale="0" />
+    <NavigationProperty Name="Characters" Relationship="Self.FK_Characters_Users" FromRole="Users" ToRole="Characters" />
+  </EntityType>
+  <Association Name="FK_Characters_CharClass">
+    <End Role="CharClass" Type="Self.CharClass" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Characters" Type="Self.Character" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CharClass">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="Characters">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Characters_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Characters" Type="Self.Character" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Characters">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Items_Chars_Characters">
+    <End Role="Characters" Type="Self.Character" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Items_Chars" Type="Self.Items_Chars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Characters">
+        <PropertyRef Name="CharID" />
+      </Principal>
+      <Dependent Role="Items_Chars">
+        <PropertyRef Name="Item_Char_CharID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Items_Chars_Items">
+    <End Role="Items" Type="Self.Item" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Items_Chars" Type="Self.Items_Chars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="Items_Chars">
+        <PropertyRef Name="Item_Char_ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ColGameEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Characters" EntityType="Self.Character" />
+    <EntitySet Name="CharClasses" EntityType="Self.CharClass" />
+    <EntitySet Name="Conversations" EntityType="Self.Conversation" />
+    <EntitySet Name="Items" EntityType="Self.Item" />
+    <EntitySet Name="Items_Chars" EntityType="Self.Items_Chars" />
+    <EntitySet Name="Logs" EntityType="Self.Log" />
+    <EntitySet Name="Monsters" EntityType="Self.Monster" />
+    <EntitySet Name="Npcs" EntityType="Self.Npc" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_Characters_CharClass" Association="Self.FK_Characters_CharClass">
+      <End Role="CharClass" EntitySet="CharClasses" />
+      <End Role="Characters" EntitySet="Characters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Characters_Users" Association="Self.FK_Characters_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Characters" EntitySet="Characters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Items_Chars_Characters" Association="Self.FK_Items_Chars_Characters">
+      <End Role="Characters" EntitySet="Characters" />
+      <End Role="Items_Chars" EntitySet="Items_Chars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Items_Chars_Items" Association="Self.FK_Items_Chars_Items">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="Items_Chars" EntitySet="Items_Chars" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

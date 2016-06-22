@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfReceiveItemInQuest>
+  <ReceiveItemInQuest>
+    <QuestName>1a</QuestName>
+    <ItemID>1</ItemID>
+    <Quatity>10</Quatity>
+  </ReceiveItemInQuest>
+</ArrayOfReceiveItemInQuest>

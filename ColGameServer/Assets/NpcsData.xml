@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfNpcData>
+  <NpcData>
+    <ID>1</ID>
+    <Name>Npc 1</Name>
+    <MapName>Stage1</MapName>
+    <Texture>npc</Texture>
+    <X>300</X>
+    <Y>400</Y>
+  </NpcData>
+
+  <NpcData>
+    <ID>2</ID>
+    <Name>Npc 2</Name>
+    <MapName>Stage1</MapName>
+    <Texture>npc</Texture>
+    <X>500</X>
+    <Y>400</Y>
+  </NpcData>
+</ArrayOfNpcData>

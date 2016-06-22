@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfTextureData>
+  <TextureData>
+    <AssetName>background</AssetName>
+    <Path>Texture/Background/MapleMap</Path>
+  </TextureData>
+  
+  <TextureData>
+    <AssetName>player</AssetName>
+    <Path>Test/playerTest</Path>
+  </TextureData>
+  
+  <TextureData>
+    <AssetName>playernormalright</AssetName>
+    <Path>Test/playerNormal</Path>
+  </TextureData>
+  
+  <TextureData>
+    <AssetName>playernormalleft</AssetName>
+    <Path>Test/playerNormalLeft</Path>
+  </TextureData>
+  
+  <TextureData>
+    <AssetName>playermoveright</AssetName>
+    <Path>Test/playerMoveRight</Path>
+  </TextureData>
+  
+  <TextureData>
+    <AssetName>playermoveleft</AssetName>
+    <Path>Test/playerMoveLeft</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>drawRect</AssetName>
+    <Path>Test/drawRect</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>npc</AssetName>
+    <Path>Test/npc</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>conversationMin</AssetName>
+    <Path>Texture/Background/conversationmin</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>conversationMax</AssetName>
+    <Path>Texture/Background/conversationmax</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>EscBg</AssetName>
+    <Path>Texture/Background/BackgroundEsc</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>bgBtn141_25_1</AssetName>
+    <Path>Texture/Background/bgBtn141_25_1</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>bgBtn141_25_2</AssetName>
+    <Path>Texture/Background/bgBtn141_25_2</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>bgShortcut</AssetName>
+    <Path>Texture/Background/bgShortcut</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>bgShortcut0_1</AssetName>
+    <Path>Texture/Background/bgShortcut0_1</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>+</AssetName>
+    <Path>Texture/Button/+</Path>
+  </TextureData>
+  
+  <TextureData>
+    <AssetName>-</AssetName>
+    <Path>Texture/Button/-</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>volume_bar</AssetName>
+    <Path>Texture/Button/bar_volume</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>circle</AssetName>
+    <Path>Texture/Button/circle</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>wd</AssetName>
+    <Path>Test/walkingdead</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>playerMini</AssetName>
+    <Path>Texture/Other/playerMinimap</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>selectStr</AssetName>
+    <Path>Test/selectStr</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>ErrorBackground</AssetName>
+    <Path>Texture/Background/PopupErrorBg</Path>
+  </TextureData>
+  
+<!--Start Start Game Screen-->
+  <TextureData>
+    <AssetName>StartGameBG</AssetName>
+    <Path>Texture/Background/StartGameBG</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>btnSignin</AssetName>
+    <Path>Texture/Button/signin</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>btnExitgame</AssetName>
+    <Path>Texture/Button/exitgame</Path>
+  </TextureData>
+<!--End Start Game Screen-->
+  
+<!--Start Login Game Screen-->
+  <TextureData>
+    <AssetName>LoginGameBG</AssetName>
+    <Path>Texture/Background/LoginGameBG</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>btnCreateAccount</AssetName>
+    <Path>Texture/Button/creat</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>btnForgot</AssetName>
+    <Path>Texture/Button/forgot</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>btnLogin</AssetName>
+    <Path>Texture/Button/Login-Button-Large-Normal</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>UsernameInput</AssetName>
+    <Path>Texture/Other/Username-Input-Field-Large</Path>
+  </TextureData>
+  
+  <TextureData>
+    <AssetName>PasswordInput</AssetName>
+    <Path>Texture/Other/Password-Input-Field-Large</Path>
+  </TextureData>
+<!--End Login Game Screen-->
+  
+<!--Texture Character Screen-->
+  <TextureData>
+    <AssetName>bg</AssetName>
+    <Path>Test/bg</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>back</AssetName>
+    <Path>Test/back</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>create</AssetName>
+    <Path>Test/create</Path>
+  </TextureData>
+
+
+  <TextureData>
+    <AssetName>exit</AssetName>
+    <Path>Test/exit</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>class1</AssetName>
+    <Path>Test/class1</Path>
+  </TextureData>
+
+<TextureData>
+    <AssetName>class1.1</AssetName>
+    <Path>Test/class1.1</Path>
+  </TextureData>
+  
+  <TextureData>
+    <AssetName>class2.1</AssetName>
+    <Path>Test/class2.1</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>class2</AssetName>
+    <Path>Test/class2</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>previewClass1</AssetName>
+    <Path>Test/previewClass1</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>previewClass2</AssetName>
+    <Path>Test/previewClass2</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>selectClass1</AssetName>
+    <Path>Test/selectClass1</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>selectClass2</AssetName>
+    <Path>Test/selectClass2</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>listChar</AssetName>
+    <Path>Test/listChar</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>listChar2</AssetName>
+    <Path>Test/listChar2</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>nextStep</AssetName>
+    <Path>Test/nextStep</Path>
+  </TextureData>
+  
+  <TextureData>
+    <AssetName>startGame</AssetName>
+    <Path>Test/startGame</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>delete</AssetName>
+    <Path>Test/delete</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>colorClick</AssetName>
+    <Path>Test/colorClick</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>56606001_p0</AssetName>
+    <Path>Test/56606001_p0</Path>
+  </TextureData>
+  
+  <TextureData>
+    <AssetName>ButtonGrenNormal</AssetName>
+    <Path>Texture/Button/bgBtn31_5_green_normal</Path>
+  </TextureData>
+  
+  <TextureData>
+    <AssetName>ButtonGrenHover</AssetName>
+    <Path>Texture/Button/bgBtn31_5_green_hover</Path>
+  </TextureData>
+  
+  <TextureData>
+    <AssetName>ButtonReadNormal</AssetName>
+    <Path>Texture/Button/bgBtn31_5_normal</Path>
+  </TextureData>
+  
+  <TextureData>
+    <AssetName>ButtonReadHover</AssetName>
+    <Path>Texture/Button/bgBtn31_5_hover</Path>
+  </TextureData>
+<!--End Texture Character-->
+
+<!-- Main Play Screen -->
+  <TextureData>
+    <AssetName>minimap</AssetName>
+    <Path>Texture/Background/minimapwindows</Path>
+  </TextureData>
+  
+  <TextureData>
+    <AssetName>bgItem</AssetName>
+    <Path>Texture/Background/Inventory</Path>
+  </TextureData>
+  
+  <TextureData>
+    <AssetName>hoverInventory</AssetName>
+    <Path>Texture/Background/hoverinventory</Path>
+  </TextureData>
+  
+  <TextureData>
+    <AssetName>Gold</AssetName>
+    <Path>Texture/Other/gold</Path>
+  </TextureData>
+  
+  <TextureData>
+    <AssetName>LogoInventory</AssetName>
+    <Path>Texture/Other/DiscInventory</Path>
+  </TextureData>
+  
+  <TextureData>
+    <AssetName>closeShortcut</AssetName>
+    <Path>Texture/Button/closeShortcut</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>logoQuest</AssetName>
+    <Path>Texture/Other/DiscQuests</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>bgQuest</AssetName>
+    <Path>Texture/Background/QuestWindows</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>bgItemQuest</AssetName>
+    <Path>Texture/Background/ReceiveItemQuest</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>scrollBarQuest</AssetName>
+    <Path>Texture/Background/scrollBarQuest</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>bgListQuest</AssetName>
+    <Path>Texture/Background/ListQuestWindows</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>btnViewListQuest</AssetName>
+    <Path>Texture/Button/ViewListQuest</Path>
+  </TextureData>
+
+  <TextureData>
+    <AssetName>bgActiveQuestList</AssetName>
+    <Path>Texture/Background/ActiveQuestList</Path>
+  </TextureData>
+<!-- End MainPlay Screen -->
+</ArrayOfTextureData>

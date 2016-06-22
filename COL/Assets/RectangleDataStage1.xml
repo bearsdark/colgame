@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfRectangleData>
+  <RectangleData>
+    <id>1</id>
+    <properties>normal</properties>
+    <x>0</x>
+    <y>520</y>
+    <width>905</width>
+    <height>20</height>
+  </RectangleData>
+  
+  <RectangleData>
+    <id>2</id>
+    <properties>normal</properties>
+    <x>905</x>
+    <y>460</y>
+    <width>50</width>
+    <height>350</height>
+  </RectangleData>
+
+  <RectangleData>
+    <id>3</id>
+    <properties>normal</properties>
+    <x>975</x>
+    <y>450</y>
+    <width>400</width>
+    <height>20</height>
+  </RectangleData>
+</ArrayOfRectangleData>

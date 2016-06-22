@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfGroupRectangleData>
+  <GroupRectangleData>
+    <id>1</id>
+    <properties>normal</properties>
+  </GroupRectangleData>
+  
+  <GroupRectangleData>
+    <id>2</id>
+    <properties>die</properties>
+  </GroupRectangleData>
+  
+</ArrayOfGroupRectangleData>

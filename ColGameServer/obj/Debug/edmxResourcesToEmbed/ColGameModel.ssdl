@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ColGameModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Characters">
+    <Key>
+      <PropertyRef Name="CharID" />
+    </Key>
+    <Property Name="CharID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CharName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ClassID" Type="tinyint" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CharClass">
+    <Key>
+      <PropertyRef Name="ClassID" />
+    </Key>
+    <Property Name="ClassID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClassName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Conversations">
+    <Key>
+      <PropertyRef Name="CVSID" />
+    </Key>
+    <Property Name="CVSID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CVSNpcID" Type="int" Nullable="false" />
+    <Property Name="CVSClassID" Type="tinyint" Nullable="false" />
+    <Property Name="CVSType" Type="tinyint" Nullable="false" />
+    <Property Name="CVSContent" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Items">
+    <Key>
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="ItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ItemClassID" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Items_Chars">
+    <Key>
+      <PropertyRef Name="Item_Char_ID" />
+    </Key>
+    <Property Name="Item_Char_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Item_Char_CharID" Type="int" Nullable="false" />
+    <Property Name="Item_Char_ItemID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Logs">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LogType" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="LogContent" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LogOf" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Monsters">
+    <Key>
+      <PropertyRef Name="MonsterID" />
+    </Key>
+    <Property Name="MonsterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MonsterName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MonsterMap" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Monster_X" Type="int" Nullable="false" />
+    <Property Name="Monster_Y" Type="int" Nullable="false" />
+    <Property Name="Monster_ReviveTimes" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Npcs">
+    <Key>
+      <PropertyRef Name="NpcID" />
+    </Key>
+    <Property Name="NpcID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NpcName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NpcMap" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Npc_X" Type="int" Nullable="false" />
+    <Property Name="Npc_Y" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="24" Nullable="false" />
+    <Property Name="PassWord" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="numeric" Precision="15" Scale="0" />
+  </EntityType>
+  <Association Name="FK_Characters_CharClass">
+    <End Role="CharClass" Type="Self.CharClass" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Characters" Type="Self.Characters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CharClass">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="Characters">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Characters_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Characters" Type="Self.Characters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Characters">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Items_Chars_Characters">
+    <End Role="Characters" Type="Self.Characters" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Items_Chars" Type="Self.Items_Chars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Characters">
+        <PropertyRef Name="CharID" />
+      </Principal>
+      <Dependent Role="Items_Chars">
+        <PropertyRef Name="Item_Char_CharID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Items_Chars_Items">
+    <End Role="Items" Type="Self.Items" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Items_Chars" Type="Self.Items_Chars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="Items_Chars">
+        <PropertyRef Name="Item_Char_ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ColGameModelStoreContainer">
+    <EntitySet Name="Characters" EntityType="Self.Characters" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CharClass" EntityType="Self.CharClass" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Conversations" EntityType="Self.Conversations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Items_Chars" EntityType="Self.Items_Chars" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Logs" EntityType="Self.Logs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Monsters" EntityType="Self.Monsters" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Npcs" EntityType="Self.Npcs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Characters_CharClass" Association="Self.FK_Characters_CharClass">
+      <End Role="CharClass" EntitySet="CharClass" />
+      <End Role="Characters" EntitySet="Characters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Characters_Users" Association="Self.FK_Characters_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Characters" EntitySet="Characters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Items_Chars_Characters" Association="Self.FK_Items_Chars_Characters">
+      <End Role="Characters" EntitySet="Characters" />
+      <End Role="Items_Chars" EntitySet="Items_Chars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Items_Chars_Items" Association="Self.FK_Items_Chars_Items">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="Items_Chars" EntitySet="Items_Chars" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

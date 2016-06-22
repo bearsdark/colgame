@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{14ABEFE5-F283-48AA-BCFB-AE2E4DD5B85D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>COL</RootNamespace>
+    <AssemblyName>COL</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <MonoGameContentBuilderExe>
+    </MonoGameContentBuilderExe>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Windows\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Windows\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Game1.cs" />
+    <Compile Include="GameFramework\CharacterData.cs" />
+    <Compile Include="GameFramework\Fonts\FontData.cs" />
+    <Compile Include="GameFramework\Fonts\FontManager.cs" />
+    <Compile Include="GameFramework\Infomations.cs" />
+    <Compile Include="GameFramework\Items\ItemMove.cs" />
+    <Compile Include="GameFramework\Items\ItemData.cs" />
+    <Compile Include="GameFramework\Network.cs" />
+    <Compile Include="GameFramework\Npcs\NpcData.cs" />
+    <Compile Include="GameFramework\PlayerActions.cs" />
+    <Compile Include="GameFramework\Quests\QuestData.cs" />
+    <Compile Include="GameFramework\Rectangle\GroupRectangleData.cs" />
+    <Compile Include="GameFramework\Rectangle\RectangleData.cs" />
+    <Compile Include="GameFramework\Sounds\SoundData.cs" />
+    <Compile Include="GameFramework\Sounds\SoundManager.cs" />
+    <Compile Include="GameFramework\Textures\TextureData.cs" />
+    <Compile Include="GameFramework\Textures\TextureManager.cs" />
+    <Compile Include="GameObjects\Animation.cs" />
+    <Compile Include="GameObjects\ButtonClick.cs" />
+    <Compile Include="GameObjects\Camera\DetectCamera.cs" />
+    <Compile Include="GameObjects\CharacterClassSelection.cs" />
+    <Compile Include="GameObjects\CharacterSelection.cs" />
+    <Compile Include="GameObjects\GameObject.cs" />
+    <Compile Include="GameObjects\Maps\RectangleMaps.cs" />
+    <Compile Include="GameObjects\MiniMap.cs" />
+    <Compile Include="GameObjects\Npcs\Conversation.cs" />
+    <Compile Include="GameObjects\Npcs\ConversationSelect.cs" />
+    <Compile Include="GameObjects\Npcs\Npc.cs" />
+    <Compile Include="GameObjects\Players\OthersPlayer.cs" />
+    <Compile Include="GameObjects\Players\Player.cs" />
+    <Compile Include="GameObjects\PopupError.cs" />
+    <Compile Include="GameObjects\Quests\Quest.cs" />
+    <Compile Include="GameObjects\Shortcuts\Esc_Shortcut.cs" />
+    <Compile Include="GameObjects\Shortcuts\InventorySlots.cs" />
+    <Compile Include="GameObjects\Shortcuts\Inventory_Shortcut.cs" />
+    <Compile Include="GameObjects\Shortcuts\Option_Shortcut.cs" />
+    <Compile Include="GameObjects\Shortcuts\Quest_Shortcut.cs" />
+    <Compile Include="GameObjects\Shortcuts\Shortcut.cs" />
+    <Compile Include="GameObjects\TextInput.cs" />
+    <Compile Include="GameStateManagement\GameScreen.cs" />
+    <Compile Include="GameStateManagement\InputAction.cs" />
+    <Compile Include="GameStateManagement\InputState.cs" />
+    <Compile Include="GameStateManagement\IScreenFactory.cs" />
+    <Compile Include="GameStateManagement\ScreenManager.cs" />
+    <Compile Include="Helpers\CollisionHelper.cs" />
+    <Compile Include="Helpers\DataHelpers.cs" />
+    <Compile Include="Helpers\Functions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\Character.cs" />
+    <Compile Include="Screens\CharacterConnect.cs" />
+    <Compile Include="Screens\CreateCharacter.cs" />
+    <Compile Include="Screens\InfoCharacters.cs" />
+    <Compile Include="Screens\FirstConnection.cs" />
+    <Compile Include="Screens\LoadingScreen.cs" />
+    <Compile Include="Screens\LoginGame.cs" />
+    <Compile Include="Screens\MainPlay.cs" />
+    <Compile Include="Screens\PopupCreateCharacter.cs" />
+    <Compile Include="Screens\StartGame.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Lidgren.Network, Version=3.4.0.456, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MSBuildProgramFiles32)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\FontData.xml" />
+    <Content Include="Assets\GroupRectangle.xml" />
+    <Content Include="Assets\NpcStage1Data.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\RectangleDataStage1.xml" />
+    <Content Include="Assets\TextureData.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
